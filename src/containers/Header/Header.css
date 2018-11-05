@@ -5,7 +5,35 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--denim);
-  box-shadow: 1px 1px 10px 4px #4c6c7c;
+  box-shadow: 1px 1px 1px 1px var(--denim);
+}
+
+.btn {
+  width: 125px;
+  height: 50px;
+  background-color: var(--coral);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--turquoise);
+}
+
+.btn:active {
+  background-color: var(--sage);
+}
+
+.h-badge {
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.h-logo {
+  height: 60px;
 }
 
 .h-logo-group,
@@ -13,23 +41,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 .h-logo-group {
-  height: 200px;
-  width: 500px;
+  height: 100px;
+  width: 215px;
+}
+
+.h-logo-group:active {
+  opacity: 0.75;
 }
 
 .h-nav-group {
   height: 200px;
-  width: 500px;
-}
-
-.btn {
-  width: 150px;
-  height: 100px;
-  background-color: var(--coral);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  width: 300px;
 }

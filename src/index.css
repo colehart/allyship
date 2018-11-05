@@ -15,7 +15,8 @@ body {
   padding: 0;
   background-color: var(--deep-blue);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.2px;
   color: #FFFFFF;
 }
 
@@ -24,4 +25,8 @@ h2,
 h3,
 h4 {
   font-weight: 900;
+}
+
+*:focus {
+  outline: none;
 }

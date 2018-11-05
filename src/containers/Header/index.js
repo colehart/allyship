@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
+import shuttleIcon from '../../assets/images/space-shuttle.svg'
 import './Header.css';
 
 export const Header = () => {
@@ -11,7 +12,8 @@ export const Header = () => {
       >
         <img
           className='h-logo'
-          src='../../assets/images/space-shuttle.svg'
+          src={ shuttleIcon }
+          alt='A space shuttle'
         />
         <h1>allyShip</h1>
       </NavLink>
@@ -27,7 +29,7 @@ export const Header = () => {
           className="h-saved btn"
         >
           Saved
-          <span> 0</span>
+          <span className='h-badge'> 0</span>
         </NavLink>
       </nav>
     </div>
