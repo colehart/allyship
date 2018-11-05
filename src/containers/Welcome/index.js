@@ -4,17 +4,39 @@ import './Welcome.css';
 
 export const Welcome = () => {
   return (
-    <main className="Welcome">
+    <main className='Welcome'>
       <section className='w-message'>
         <h2>Welcome!</h2>
         <p>
           Allyship exists to help you find your way in the galaxy of knowledge and news any true ally must navigate.
         <br />
-          Please choose from the following categories to research the latest news about a specific minority identity or choose your own by entering a specific search keyword or phrase.
+        <br />
+          Research the latest news about a specific minority identity or issue.
+        {/* , or choose your own query by entering a search keyword or phrase. */}
         </p>
       </section>
-      <Link to='/'>
-      </Link>
+      <div
+        className='w-category-group'
+      >
+        <Link
+          exact to='/transgender'
+          className='btn'
+        >
+          Transgender
+        </Link>
+        <Link
+          exact to='/immigration'
+          className='btn'
+        >
+          Immigration
+        </Link>
+        <Link
+          exact to='/black-lives-matter'
+          className='btn'
+        >
+          Black Lives Matter
+        </Link>
+      </div>
     </main>
   )
 }

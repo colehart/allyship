@@ -6,7 +6,7 @@ export const CardContainer = () => {
   const cards = []
 
   return (
-    <main className="CardContainer">
+    <main className='CardContainer'>
       { cards }
     </main>
   )

@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Header />
         <Route
           exact path='/'
@@ -16,6 +16,22 @@ class App extends Component {
         />
         <Route
           exact path='/saved'
+          render={() => CardContainer }
+        />
+        <Route
+          exact path='/transgender'
+          render={() => CardContainer }
+        />
+        <Route
+          exact path='/immigration'
+          render={() => CardContainer }
+        />
+        <Route
+          exact path='/black-lives-matter'
+          render={() => CardContainer }
+        />
+        <Route
+          exact path='/search'
           render={() => CardContainer }
         />
       </div>

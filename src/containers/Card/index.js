@@ -3,7 +3,7 @@ import './Card.css';
 
 export const Card = () => {
   return (
-    <article className="Card">
+    <article className='Card'>
     </article>
   )
 }
