@@ -1,0 +1,63 @@
+.Header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--denim);
+  box-shadow: 1px 1px 1px 1px var(--denim);
+}
+
+.btn {
+  width: 125px;
+  height: 50px;
+  background-color: var(--coral);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.btn:hover,
+.btn:focus,
+.active {
+  background-color: var(--turquoise);
+}
+
+.h-logo-group:active {
+  opacity: 0.8;
+}
+
+.btn:active {
+  background-color: #498D93;
+}
+
+.h-badge {
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.h-logo {
+  height: 60px;
+}
+
+.h-logo-group,
+.h-nav-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.h-logo-group {
+  height: 100px;
+  width: 215px;
+}
+
+.h-nav-group {
+  height: 200px;
+  width: 300px;
+}

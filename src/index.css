@@ -1,4 +1,32 @@
+:root {
+  --deep-blue: #2D3142;
+  --crater-lake: #003049;
+  --denim: #4F5D75;
+  --turquoise: #5CA4A9;
+  --sage: #9BC1BC;
+  --coral: #EF8354;
+  --moon-gold: #EAE2B7;
+  --moon-face: #E6EBE0;
+  --spaceship-gray: #BFC0C0;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--deep-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+}
+
+*:focus {
+  outline: none;
 }
