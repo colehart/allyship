@@ -13,9 +13,10 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--deep-blue);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  background-color: var(--deep-blue);
+  color: #FFFFFF;
 }
 
 h1,
