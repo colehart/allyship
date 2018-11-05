@@ -4,10 +4,9 @@ exports[`Header matches the snapshot 1`] = `
 <div
   className="Header"
 >
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
+  <Link
     className="h-logo-group"
+    replace={false}
     to="/"
   >
     <img
@@ -16,9 +15,9 @@ exports[`Header matches the snapshot 1`] = `
       src="space-shuttle.svg"
     />
     <h1>
-      allyShip
+      Allyship
     </h1>
-  </NavLink>
+  </Link>
   <nav
     className="h-nav-group"
   >
@@ -26,6 +25,7 @@ exports[`Header matches the snapshot 1`] = `
       activeClassName="active"
       aria-current="page"
       className="h-categories btn"
+      exact={true}
       to="/"
     >
       Categories
@@ -34,6 +34,7 @@ exports[`Header matches the snapshot 1`] = `
       activeClassName="active"
       aria-current="page"
       className="h-saved btn"
+      exact={true}
       to="/saved"
     >
       Saved

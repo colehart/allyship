@@ -19,19 +19,25 @@ export const Welcome = () => {
         className='w-category-group'
       >
         <Link
-          exact to='/transgender'
+          to='/transgender'
+          exact='true'
           className='btn'
+          aria-label='Click here for the latest transgender news'
         >
           Transgender
         </Link>
         <Link
-          exact to='/immigration'
+          to='/immigration'
+          exact='true'
           className='btn'
+          aria-label='Click here for the latest immigration news'
         >
           Immigration
         </Link>
         <Link
-          exact to='/black-lives-matter'
+          to='/black-lives-matter'
+          exact='true'
+          aria-label='Click here for the latest black lives matter news'
           className='btn'
         >
           Black Lives Matter

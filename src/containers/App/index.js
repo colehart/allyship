@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Header } from '../Header'
 import { Welcome } from '../Welcome'
 import { CardContainer } from '../CardContainer'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        <Header />
+export const App = () => {
+  const noMatch = ({ location }) => (
+    <div className='a-404'>
+      <h2>404 - Your ship has gone off course.</h2>
+      <p>No routes match {location.pathname}.</p>
+      <p>Please click the orange buttons in this app to navigate to your desired destination.</p>
+    </div>
+  )
+
+  return (
+    <div className='App'>
+      <Header />
+      <Switch>
         <Route
           exact path='/'
           component={ Welcome }
@@ -31,12 +39,15 @@ class App extends Component {
           render={() => CardContainer }
         />
         <Route
-          exact path='/search'
-          render={() => CardContainer }
+          component={noMatch}
         />
-      </div>
-    );
-  }
+      </Switch>
+      {/* <Route
+        exact path='/search'
+        render={() => CardContainer }
+      /> */}
+    </div>
+  );
 }
 
 export default App;

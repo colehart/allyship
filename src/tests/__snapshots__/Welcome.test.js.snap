@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome matches the snapshot 1`] = `
+<main
+  className="Welcome"
+>
+  <section
+    className="w-message"
+  >
+    <h2>
+      Welcome!
+    </h2>
+    <p>
+      Allyship exists to help you find your way in the galaxy of knowledge and news any true ally must navigate.
+      <br />
+      <br />
+      Research the latest news about a specific minority identity or issue.
+    </p>
+  </section>
+  <div
+    className="w-category-group"
+  >
+    <Link
+      aria-label="Click here for the latest transgender news"
+      className="btn"
+      exact="true"
+      replace={false}
+      to="/transgender"
+    >
+      Transgender
+    </Link>
+    <Link
+      aria-label="Click here for the latest immigration news"
+      className="btn"
+      exact="true"
+      replace={false}
+      to="/immigration"
+    >
+      Immigration
+    </Link>
+    <Link
+      aria-label="Click here for the latest black lives matter news"
+      className="btn"
+      exact="true"
+      replace={false}
+      to="/black-lives-matter"
+    >
+      Black Lives Matter
+    </Link>
+  </div>
+</main>
+`;
