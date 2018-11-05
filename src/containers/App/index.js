@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { Header } from '../Header'
+import { CardContainer } from '../CardContainer'
 import './App.css';
 
 class App extends Component {
@@ -6,7 +9,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <CardContainer />
+        <Route
+          exact path='/'
+          component={ CardContainer }
+        />
+        <Route
+          exact path='/saved'
+          render={() => CardContainer }
+        />
       </div>
     );
   }

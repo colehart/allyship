@@ -3,5 +3,17 @@
 exports[`App matches the snapshot 1`] = `
 <div
   className="App"
-/>
+>
+  <Header />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    exact={true}
+    path="/saved"
+    render={[Function]}
+  />
+</div>
 `;

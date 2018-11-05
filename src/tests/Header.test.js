@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Header from '../containers/Header';
+import { Header } from '../containers/Header';
 
 describe('Header', () => {
   let wrapper;

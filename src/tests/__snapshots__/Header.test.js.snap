@@ -1,3 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header matches the snapshot 1`] = `undefined`;
+exports[`Header matches the snapshot 1`] = `
+<div
+  className="Header"
+>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="h-logo-group"
+    to="/"
+  >
+    <img
+      className="h-logo"
+      src="../../assets/images/space-shuttle.svg"
+    />
+    <h1>
+      allyShip
+    </h1>
+  </NavLink>
+  <nav
+    className="h-nav-group"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="h-categories btn"
+      to="/"
+    >
+      Categories
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="h-saved btn"
+      to="/saved"
+    >
+      Saved
+      <span>
+         0
+      </span>
+    </NavLink>
+  </nav>
+</div>
+`;

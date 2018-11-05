@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import CardContainer from '../containers/CardContainer';
+import { CardContainer } from '../containers/CardContainer';
 
 describe('CardContainer', () => {
   let wrapper;
