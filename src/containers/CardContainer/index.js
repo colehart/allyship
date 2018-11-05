@@ -6,8 +6,8 @@ export const CardContainer = () => {
   const cards = []
 
   return (
-    <div className="CardContainer">
+    <main className="CardContainer">
       { cards }
-    </div>
+    </main>
   )
 }

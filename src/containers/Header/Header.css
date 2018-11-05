@@ -5,6 +5,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--denim);
+  box-shadow: 1px 1px 10px 4px #4c6c7c;
 }
 
 .h-logo-group,
@@ -27,7 +28,7 @@
 .btn {
   width: 150px;
   height: 100px;
-  background-color: var(--coral)
+  background-color: var(--coral);
   display: flex;
   justify-content: space-around;
   align-items: center;
