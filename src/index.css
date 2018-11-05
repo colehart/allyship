@@ -1,16 +1,20 @@
 :root {
-  --deep-blue: #003049;
-  --comet-red: #D62828;
-  --sun-orange: #F77F00;
-  --gold-star: #FCBF49;
-  --moon-beam: #EAE2B7;
+  --deep-blue: #2D3142;
+  --crater-lake: #003049;
+  --denim: #4F5D75;
+  --turquoise: #5CA4A9;
+  --sage: #9BC1BC;
+  --coral: #EF8354;
+  --moon-gold: #EAE2B7;
+  --moon-face: #E6EBE0;
+  --spaceship-gray: #BFC0C0;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  font-weigth: 400;
+  font-weight: 400;
   background-color: var(--deep-blue);
 }
 
