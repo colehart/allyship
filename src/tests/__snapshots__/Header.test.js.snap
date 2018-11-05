@@ -11,8 +11,9 @@ exports[`Header matches the snapshot 1`] = `
     to="/"
   >
     <img
+      alt="A space shuttle"
       className="h-logo"
-      src="../../assets/images/space-shuttle.svg"
+      src="space-shuttle.svg"
     />
     <h1>
       allyShip
@@ -36,7 +37,9 @@ exports[`Header matches the snapshot 1`] = `
       to="/saved"
     >
       Saved
-      <span>
+      <span
+        className="h-badge"
+      >
          0
       </span>
     </NavLink>

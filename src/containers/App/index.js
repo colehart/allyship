@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Header } from '../Header'
+import { Welcome } from '../Welcome'
 import { CardContainer } from '../CardContainer'
 import './App.css';
 
@@ -11,7 +12,7 @@ class App extends Component {
         <Header />
         <Route
           exact path='/'
-          component={ CardContainer }
+          component={ Welcome }
         />
         <Route
           exact path='/saved'

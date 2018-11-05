@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import shuttleIcon from '../../assets/images/space-shuttle.svg'
 import './Header.css';
 
 export const Header = () => {
   return (
     <div className='Header'>
-      <NavLink
+      <Link
         to='/'
         className='h-logo-group'
       >
@@ -15,17 +15,17 @@ export const Header = () => {
           src={ shuttleIcon }
           alt='A space shuttle'
         />
-        <h1>allyShip</h1>
-      </NavLink>
+        <h1>Allyship</h1>
+      </Link>
       <nav className='h-nav-group'>
         <NavLink
-          to='/'
+          exact to='/'
           className="h-categories btn"
         >
           Categories
         </NavLink>
         <NavLink
-          to='/saved'
+          exact to='/saved'
           className="h-saved btn"
         >
           Saved

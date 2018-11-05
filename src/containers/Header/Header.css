@@ -20,7 +20,8 @@
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.active {
   background-color: var(--turquoise);
 }
 
