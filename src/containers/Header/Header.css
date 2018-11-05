@@ -19,12 +19,17 @@
   color: white;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: var(--turquoise);
 }
 
+.h-logo-group:active {
+  opacity: 0.8;
+}
+
 .btn:active {
-  background-color: var(--sage);
+  background-color: #498D93;
 }
 
 .h-badge {
@@ -48,10 +53,6 @@
 .h-logo-group {
   height: 100px;
   width: 215px;
-}
-
-.h-logo-group:active {
-  opacity: 0.75;
 }
 
 .h-nav-group {
