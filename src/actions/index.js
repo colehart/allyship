@@ -3,7 +3,12 @@ export const isLoading = (bool) => ({
   isLoading: bool,
 })
 
-export const receivedError = (message) => ({
+export const receivedError = (errorMessage) => ({
   type: 'RECEIVED_ERROR',
-  receivedError: message,
+  errorMessage,
+})
+
+export const setStories = (stories) => ({
+  type: 'SET_STORIES',
+  stories,
 })

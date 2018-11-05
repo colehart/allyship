@@ -16,15 +16,20 @@ describe('actions', () => {
     const mockErrorMessage = 'Your API key has been disabled.'
     const expectedAction = {
       type: 'RECEIVED_ERROR',
-      receivedError: mockErrorMessage,
+      errorMessage: mockErrorMessage,
     }
 
     const result = Actions.receivedError(mockErrorMessage)
     expect(result).toEqual(expectedAction)
   })
 
-  it('should have a type of RECEIVED_ERROR', () => {
+  it('should have a type of SET_STORIES', () => {
     const stories = mockStories;
-
+    const expectedAction = {
+      type: 'SET_STORIES',
+      stories: mockStories
+    }
+    const result = Actions.setStories(mockStories)
+    expect(result).toEqual(expectedAction)
   })
 })
