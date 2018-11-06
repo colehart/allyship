@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'
-import shuttleIcon from '../../assets/images/space-shuttle.svg'
+import { Link, NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import shuttleIcon from '../../assets/images/space-shuttle.svg';
 import './Header.css';
 
 export const Header = () => {
@@ -35,3 +36,9 @@ export const Header = () => {
     </div>
   )
 }
+
+export const mapStateToProps = (state) => ({
+  caughtErrored: state.caughtErrored
+})
+
+export default connect(mapStateToProps)(Header)

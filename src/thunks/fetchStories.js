@@ -30,7 +30,8 @@ const cleanStories = (rawStories) => {
       url,
       urlToImage,
       content,
-      published: article.publishedAt.slice(0, 10)
+      published: article.publishedAt.slice(0, 10),
+      isSaved: false,
     }
   })
 }

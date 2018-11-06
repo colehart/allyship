@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Header } from '../Header'
-import { Welcome } from '../Welcome'
-import { CardContainer } from '../CardContainer'
+import { connect } from 'react-redux';
+import { Header } from '../Header';
+import { Welcome } from '../Welcome';
+import { CardContainer } from '../CardContainer';
 import './App.css';
 
-export const App = () => {
+export const App = (props) => {
+  const { isLoading, stories } = props
+
   const noMatch = ({ location }) => (
     <div className='a-404'>
       <h2>404 - Your ship has gone off course.</h2>
@@ -50,4 +53,8 @@ export const App = () => {
   );
 }
 
-export default App;
+export const mapStateToProps = (state) => ({
+  isLoading: state.isLoading,
+})
+
+export default connect(mapStateToProps)(App);
