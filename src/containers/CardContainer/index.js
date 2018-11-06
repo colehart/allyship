@@ -2,12 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
-import Card from '../Card';
+import { Card } from '../Card';
 import './CardContainer.css';
 
 export const CardContainer = (props) => {
   const { isLoading } = props
-  const cards = []
+  const cards = props.stories.map(story => {
+    return <Card {...story} key={story.description} />
+  })
 
   return (
     <main className='CardContainer'>
@@ -17,11 +19,13 @@ export const CardContainer = (props) => {
 }
 
 export const mapStateToProps = (state) => ({
-  isLoading: state.isLoading
+  isLoading: state.isLoading,
+  stories: state.stories,
 })
 
 CardContainer.propTypes = {
   isLoading: PropTypes.bool,
+  stories: PropTypes.array,
 }
 
 export default connect(mapStateToProps)(CardContainer)
