@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps } from '../containers/App';
-import { mockDefaultState } from './testMocks'
+import { mockDefaultState, mockFullState } from './testMocks'
 describe('App', () => {
   describe('App Component', () => {
     let wrapper;
@@ -18,10 +18,15 @@ describe('App', () => {
 
   describe('matchStateToProps', () => {
     it('should parse isLoading from state', () => {
-      const expected = false
+      const expected1 = false
 
-      const mappedProps = mapStateToProps(mockDefaultState)
-      expect(mappedProps.isLoading).toEqual(expected)
+      const mappedProps1 = mapStateToProps(mockDefaultState)
+      expect(mappedProps1.isLoading).toEqual(expected1)
+
+      const expected2 = true
+
+      const mappedProps2 = mapStateToProps(mockFullState)
+      expect(mappedProps2.isLoading).toEqual(expected2)
     })
   })
 })

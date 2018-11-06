@@ -38,7 +38,8 @@ export const Header = () => {
 }
 
 export const mapStateToProps = (state) => ({
-  caughtErrored: state.caughtErrored
+  caughtError: state.caughtError,
+  stories: state.stories
 })
 
 export default connect(mapStateToProps)(Header)

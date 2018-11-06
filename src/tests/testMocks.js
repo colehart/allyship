@@ -1,13 +1,6 @@
 export const mockUrl = 'www.mockURL.com'
 export const mockDispatch = jest.fn()
 export const mockError = 'Bad API Key'
-export const mockDefaultState = {
-  isLoading: false,
-  caughtError: '',
-  stories: []
-}
-
-
 export const mockApiStories = {
   "status": "ok",
   "totalResults": 4974,
@@ -65,3 +58,15 @@ export const mockStories = [
     isSaved: false,
   }
 ]
+
+export const mockDefaultState = {
+  isLoading: false,
+  caughtError: '',
+  stories: []
+}
+
+export const mockFullState = {
+  isLoading: true,
+  caughtError: 'Bad API key',
+  stories: mockStories
+}
