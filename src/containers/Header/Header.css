@@ -8,6 +8,10 @@
   box-shadow: 1px 1px 1px 1px var(--denim);
 }
 
+.hidden {
+  display: none;
+}
+
 .btn {
   width: 125px;
   height: 50px;
@@ -26,12 +30,12 @@
   background-color: var(--turquoise);
 }
 
-.h-logo-group:active {
-  opacity: 0.8;
-}
-
 .btn:active {
   background-color: #498D93;
+}
+
+.h-logo-group:active {
+  opacity: 0.8;
 }
 
 .h-badge {
@@ -60,4 +64,13 @@
 .h-nav-group {
   height: 200px;
   width: 300px;
+}
+
+.h-error {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background-color: var(--coral);
 }

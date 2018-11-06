@@ -7,7 +7,7 @@ import { CardContainer } from '../CardContainer';
 import './App.css';
 
 export const App = (props) => {
-  const { isLoading, stories } = props
+  const { isLoading } = props
 
   const noMatch = ({ location }) => (
     <div className='a-404'>
