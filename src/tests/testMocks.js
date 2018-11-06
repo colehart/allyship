@@ -1,4 +1,4 @@
-export const mockUrl = 'www.mockURL.com'
+export const mockQuery = 'transgender'
 export const mockDispatch = jest.fn()
 export const mockError = 'Bad API Key'
 export const mockApiStories = {
