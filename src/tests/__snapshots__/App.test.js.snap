@@ -4,16 +4,38 @@ exports[`App matches the snapshot 1`] = `
 <div
   className="App"
 >
-  <Header />
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/"
+  <Connect(Header)
+    stories={Array []}
   />
-  <Route
-    exact={true}
-    path="/saved"
-    render={[Function]}
-  />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      exact={true}
+      path="/saved"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/transgender"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/immigration"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/black-lives-matter"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
 </div>
 `;

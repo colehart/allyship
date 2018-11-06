@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header matches the snapshot 1`] = `
+exports[`Header Header Component matches the snapshot 1`] = `
 <div
   className="Header"
 >
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
+  <div
+    className="hidden"
+  />
+  <Link
+    aria-label="The Allyship logo, a link to return to the homepage"
     className="h-logo-group"
+    replace={false}
     to="/"
   >
     <img
@@ -16,16 +19,18 @@ exports[`Header matches the snapshot 1`] = `
       src="space-shuttle.svg"
     />
     <h1>
-      allyShip
+      Allyship
     </h1>
-  </NavLink>
+  </Link>
   <nav
     className="h-nav-group"
   >
     <NavLink
       activeClassName="active"
       aria-current="page"
+      aria-label="Click to return to the homepage"
       className="h-categories btn"
+      exact={true}
       to="/"
     >
       Categories
@@ -33,14 +38,126 @@ exports[`Header matches the snapshot 1`] = `
     <NavLink
       activeClassName="active"
       aria-current="page"
+      aria-label="Click to view saved news articles"
       className="h-saved btn"
+      exact={true}
       to="/saved"
     >
       Saved
       <span
         className="h-badge"
       >
-         0
+        0
+      </span>
+    </NavLink>
+  </nav>
+</div>
+`;
+
+exports[`Header Header Component renders error message accurately 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="h-error"
+  >
+    Bad API Key
+  </div>
+  <Link
+    aria-label="The Allyship logo, a link to return to the homepage"
+    className="h-logo-group"
+    replace={false}
+    to="/"
+  >
+    <img
+      alt="A space shuttle"
+      className="h-logo"
+      src="space-shuttle.svg"
+    />
+    <h1>
+      Allyship
+    </h1>
+  </Link>
+  <nav
+    className="h-nav-group"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to return to the homepage"
+      className="h-categories btn"
+      exact={true}
+      to="/"
+    >
+      Categories
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to view saved news articles"
+      className="h-saved btn"
+      exact={true}
+      to="/saved"
+    >
+      Saved
+      <span
+        className="h-badge"
+      >
+        0
+      </span>
+    </NavLink>
+  </nav>
+</div>
+`;
+
+exports[`Header Header Component renders numSaved accurately 1`] = `
+<div
+  className="Header"
+>
+  <div
+    className="hidden"
+  />
+  <Link
+    aria-label="The Allyship logo, a link to return to the homepage"
+    className="h-logo-group"
+    replace={false}
+    to="/"
+  >
+    <img
+      alt="A space shuttle"
+      className="h-logo"
+      src="space-shuttle.svg"
+    />
+    <h1>
+      Allyship
+    </h1>
+  </Link>
+  <nav
+    className="h-nav-group"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to return to the homepage"
+      className="h-categories btn"
+      exact={true}
+      to="/"
+    >
+      Categories
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      aria-label="Click to view saved news articles"
+      className="h-saved btn"
+      exact={true}
+      to="/saved"
+    >
+      Saved
+      <span
+        className="h-badge"
+      >
+        1
       </span>
     </NavLink>
   </nav>
