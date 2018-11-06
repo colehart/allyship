@@ -24,6 +24,7 @@ exports[`Welcome Welcome Component matches the snapshot 1`] = `
       aria-label="Click here for the latest transgender news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/transgender"
     >
@@ -33,6 +34,7 @@ exports[`Welcome Welcome Component matches the snapshot 1`] = `
       aria-label="Click here for the latest immigration news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/immigration"
     >
@@ -42,6 +44,7 @@ exports[`Welcome Welcome Component matches the snapshot 1`] = `
       aria-label="Click here for the latest black lives matter news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/black-lives-matter"
     >
@@ -76,6 +79,7 @@ exports[`Welcome Welcome Component should render the Loader if isLoading(true) 1
       aria-label="Click here for the latest transgender news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/transgender"
     >
@@ -85,6 +89,7 @@ exports[`Welcome Welcome Component should render the Loader if isLoading(true) 1
       aria-label="Click here for the latest immigration news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/immigration"
     >
@@ -94,6 +99,7 @@ exports[`Welcome Welcome Component should render the Loader if isLoading(true) 1
       aria-label="Click here for the latest black lives matter news"
       className="btn"
       exact="true"
+      onClick={[Function]}
       replace={false}
       to="/black-lives-matter"
     >

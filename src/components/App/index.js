@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Header } from '../../containers/Header';
-import { Welcome } from '../../containers/Welcome';
-import { CardContainer } from '../../containers/CardContainer';
+import Header from '../../containers/Header';
+import Welcome from '../../containers/Welcome';
+import CardContainer from '../../containers/CardContainer';
 import './App.css';
 
 export const App = () => {

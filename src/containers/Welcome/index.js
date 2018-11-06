@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Loader } from '../../components/Loader';
 import { fetchStories } from '../../thunks/fetchStories';
+import apiKey from '../../apiKey';
 import './Welcome.css';
 
 export const Welcome = (props) => {
-  const { isLoading } = props
+  const { isLoading, fetchStories } = props
+
+  const handleClick = (query) => {
+    const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`
+    fetchStories(url)
+  }
 
   return (
     <main className='Welcome'>
@@ -32,6 +38,7 @@ export const Welcome = (props) => {
           exact='true'
           className='btn'
           aria-label='Click here for the latest transgender news'
+          onClick={() => handleClick('transgender')}
         >
           Transgender
         </Link>
@@ -40,14 +47,16 @@ export const Welcome = (props) => {
           exact='true'
           className='btn'
           aria-label='Click here for the latest immigration news'
+          onClick={() => handleClick('immigration')}
         >
           Immigration
         </Link>
         <Link
           to='/black-lives-matter'
           exact='true'
-          aria-label='Click here for the latest black lives matter news'
           className='btn'
+          aria-label='Click here for the latest black lives matter news'
+          onClick={() => handleClick('black%20lives%20matter')}
         >
           Black Lives Matter
         </Link>
@@ -65,8 +74,8 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 Welcome.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
-  fetchStories: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool,
+  fetchStories: PropTypes.func,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Welcome)
