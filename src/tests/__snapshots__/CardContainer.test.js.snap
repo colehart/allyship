@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer matches the snapshot 1`] = `
+exports[`CardContainer CardContainer component matches the snapshot 1`] = `
 <main
   className="CardContainer"
 />
+`;
+
+exports[`CardContainer CardContainer component should render the Loader if isLoading(true) 1`] = `
+<main
+  className="CardContainer"
+>
+  <Loader />
+</main>
 `;

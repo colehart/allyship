@@ -11,8 +11,7 @@ export const CardContainer = (props) => {
 
   return (
     <main className='CardContainer'>
-      { isLoading ? <Loader /> : null }
-      { cards }
+      { isLoading ? <Loader /> : cards }
     </main>
   )
 }
