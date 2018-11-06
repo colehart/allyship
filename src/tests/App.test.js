@@ -1,32 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import { App, mapStateToProps } from '../containers/App';
-import { mockDefaultState, mockFullState } from './testMocks'
+import { App } from '../components/App';
+
 describe('App', () => {
-  describe('App Component', () => {
-    let wrapper;
+  let wrapper;
 
-    beforeEach(() => {
-      wrapper = shallow(<App/>)
-    })
-
-    it('matches the snapshot', () => {
-      expect(wrapper).toMatchSnapshot();
-    })
+  beforeEach(() => {
+    wrapper = shallow(<App />)
   })
 
-  describe('matchStateToProps', () => {
-    it('should parse isLoading from state', () => {
-      const expected1 = false
-
-      const mappedProps1 = mapStateToProps(mockDefaultState)
-      expect(mappedProps1.isLoading).toEqual(expected1)
-
-      const expected2 = true
-
-      const mappedProps2 = mapStateToProps(mockFullState)
-      expect(mappedProps2.isLoading).toEqual(expected2)
-    })
+  it('matches the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   })
 })

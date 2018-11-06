@@ -1,11 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { Loader } from '../../components/Loader';
 import './Welcome.css';
 
-export const Welcome = () => {
+export const Welcome = (props) => {
+  const { isLoading } = props
+
   return (
     <main className='Welcome'>
-      <section className='w-message'>
+      { isLoading ? <Loader /> : null }
+      <section
+        className={ isLoading ? 'hidden' : 'w-message'}
+      >
         <h2>Welcome!</h2>
         <p>
           Allyship exists to help you find your way in the galaxy of knowledge and news any true ally must navigate.
@@ -46,3 +54,13 @@ export const Welcome = () => {
     </main>
   )
 }
+
+export const mapStateToProps = (state) => ({
+  isLoading: state.isLoading
+})
+
+Welcome.propTypes = {
+  isLoading: PropTypes.bool.isRequired
+}
+
+export default connect(mapStateToProps)(Welcome)

@@ -1,0 +1,7 @@
+.Loader {
+  width: 75%;
+  margin: 0 auto;
+  grid-row: 2 / 3;
+  background-image: url(../../assets/images/rocketShip.gif);
+  background-position: cover;
+}

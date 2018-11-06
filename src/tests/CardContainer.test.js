@@ -7,7 +7,7 @@ describe('CardContainer', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<CardContainer />)
+    wrapper = shallow(<CardContainer isLoading={false}/>)
   })
 
   it('matches the snapshot', () => {
