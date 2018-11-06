@@ -1,5 +1,4 @@
 import { isLoading, receivedError, setStories } from '../actions';
-import { fetchPhotos } from './fetchPhotos';
 
 export const fetchStories = (url) => {
   return async (dispatch) => {
@@ -10,13 +9,27 @@ export const fetchStories = (url) => {
         throw Error(response.statusText)
       }
       dispatch(isLoading(false))
-      const rawResponse = await response.json()
-      const photoUrl = rawResponse.articles.urlToImage
-      const stories = await dispatch(fetchPhotos(photoUrl))
-      setStories(stories)
+      const rawStories = await response.json()
+      const cleanerStories = cleanStories(rawStories)
+      dispatch(setStories(cleanerStories))
     }
     catch (error) {
       dispatch(receivedError(error.message))
     }
   }
+}
+const cleanStories = (rawStories) => {
+  return rawStories.articles.map(article => {
+    const { author, title, description, url, urlToImage, content } = article
+    return {
+      source: article.source.name,
+      author,
+      title,
+      description,
+      url,
+      urlToImage,
+      content,
+      published: article.publishedAt.slice(0, 10)
+    }
+  })
 }
