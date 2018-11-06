@@ -18,6 +18,7 @@ export const fetchStories = (url) => {
     }
   }
 }
+
 const cleanStories = (rawStories) => {
   return rawStories.articles.map(article => {
     const { author, title, description, url, urlToImage, content } = article
