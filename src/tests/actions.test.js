@@ -1,5 +1,5 @@
 import * as Actions from '../actions';
-import { mockStories } from './testMocks'
+import { mockStories, mockError } from './testMocks'
 
 describe('actions', () => {
   it('should have a type of IS_LOADING', () => {
@@ -13,13 +13,12 @@ describe('actions', () => {
   })
 
   it('should have a type of CAUGHT_ERROR', () => {
-    const mockErrorMessage = 'Your API key has been disabled.'
     const expectedAction = {
       type: 'CAUGHT_ERROR',
-      errorMessage: mockErrorMessage,
+      errorMessage: mockError,
     }
 
-    const result = Actions.caughtError(mockErrorMessage)
+    const result = Actions.caughtError(mockError)
     expect(result).toEqual(expectedAction)
   })
 

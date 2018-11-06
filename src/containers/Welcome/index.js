@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
+import { fetchStories } from '../../thunks/fetchStories';
 import './Welcome.css';
 
 export const Welcome = (props) => {
@@ -59,8 +60,13 @@ export const mapStateToProps = (state) => ({
   isLoading: state.isLoading
 })
 
+export const mapDispatchToProps = (dispatch) => ({
+  fetchStories: (url) => dispatch(fetchStories(url))
+})
+
 Welcome.propTypes = {
-  isLoading: PropTypes.bool.isRequired
+  isLoading: PropTypes.bool.isRequired,
+  fetchStories: PropTypes.func.isRequired,
 }
 
-export default connect(mapStateToProps)(Welcome)
+export default connect(mapStateToProps, mapDispatchToProps)(Welcome)

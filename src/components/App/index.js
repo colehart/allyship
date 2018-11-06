@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
 import { Header } from '../../containers/Header';
 import { Welcome } from '../../containers/Welcome';
 import { CardContainer } from '../../containers/CardContainer';
@@ -18,7 +16,7 @@ export const App = () => {
 
   return (
     <div className='App'>
-      <Header />
+      <Header stories={[]}/>
       <Switch>
         <Route
           exact path='/'
@@ -26,19 +24,19 @@ export const App = () => {
         />
         <Route
           exact path='/saved'
-          render={() => CardContainer }
+          render={ () => <CardContainer /> }
         />
         <Route
           exact path='/transgender'
-          render={() => CardContainer }
+          render={ () => <CardContainer /> }
         />
         <Route
           exact path='/immigration'
-          render={() => CardContainer }
+          render={ () => <CardContainer /> }
         />
         <Route
           exact path='/black-lives-matter'
-          render={() => CardContainer }
+          render={ () => <CardContainer /> }
         />
         <Route
           component={noMatch}

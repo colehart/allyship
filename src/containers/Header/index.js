@@ -7,10 +7,12 @@ import './Header.css';
 
 export const Header = (props) => {
   const checkSaved = () => {
-    return props.stories.reduce((numSaved, story) => {
-      if (story.isSaved) numSaved++
-      return numSaved
-    }, 0)
+    if (props.stories) {
+      return props.stories.reduce((numSaved, story) => {
+        if (story.isSaved) numSaved++
+        return numSaved
+      }, 0)
+    }
   }
 
   return (
