@@ -1,26 +1,56 @@
-import { storiesReducer } from '../reducers/storiesReducer';
+import { isLoading, caughtError, setStories } from '../reducers/storiesReducer';
 import * as Actions from '../actions';
-import { mockStories } from './testMocks'
+import { mockStories, mockError } from './testMocks'
 
 describe('storiesReducer', () => {
-  let stories;
+  describe('isLoading', () => {
+    it('should return the default state', () => {
+      const expected = false
+      const result = isLoading(undefined, {})
 
-  beforeEach(() => {
-    stories = mockStories
+      expect(result).toEqual(expected)
+    })
+
+    it('should return the state with isLoading', () => {
+      const initialState = false
+      const expected = true;
+
+      const result = isLoading(initialState, Actions.isLoading(true))
+      expect(result).toEqual(expected);
+    })
   })
 
-  it('should return the default state', () => {
-    const expected = []
-    const result = storiesReducer(undefined, {})
+  describe('caughtError', () => {
+    it('should return the default state', () => {
+      const expected = ''
+      const result = caughtError(undefined, {})
 
-    expect(result).toEqual(expected)
+      expect(result).toEqual(expected)
+    })
+
+    it('should return the state with caught error message', () => {
+      const initialState = ''
+      const expected = mockError;
+
+      const result = caughtError(initialState, Actions.caughtError(mockError))
+      expect(result).toEqual(expected);
+    })
   })
 
-  it('should return the state with state', () => {
-    const initialState = []
-    const expected = stories;
+  describe('setStories', () => {
+    it('should return the default state', () => {
+      const expected = []
+      const result = setStories(undefined, {})
 
-    const result = storiesReducer(initialState, Actions.setStories(stories))
-    expect(result).toEqual(expected);
+      expect(result).toEqual(expected)
+    })
+
+    it('should return the state with stories', () => {
+      const initialState = []
+      const expected = mockStories;
+
+      const result = setStories(initialState, Actions.setStories(mockStories))
+      expect(result).toEqual(expected);
+    })
   })
 })

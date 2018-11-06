@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import { isLoading, receivedError, setStories } from './storiesReducer'
+import { isLoading, caughtError, setStories } from './storiesReducer'
 
 const rootReducer = combineReducers({
   isLoading,
-  errorMessage: receivedError,
+  caughtError,
   stories: setStories,
 })
 

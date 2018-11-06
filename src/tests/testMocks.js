@@ -1,5 +1,6 @@
 export const mockUrl = 'www.mockURL.com'
 export const mockDispatch = jest.fn()
+export const mockError = 'Bad API Key'
 
 export const mockApiStories = {
   "status": "ok",

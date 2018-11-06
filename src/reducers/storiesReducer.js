@@ -7,16 +7,16 @@ export const isLoading = (state = false, action) => {
   }
 }
 
-export const receivedError = (state = '', action) => {
+export const caughtError = (state = '', action) => {
   switch(action.type) {
-    case 'RECEIVED_ERROR':
+    case 'CAUGHT_ERROR':
       return action.errorMessage
     default:
       return state
   }
 }
 
-export const storiesReducer = (state = [], action) => {
+export const setStories = (state = [], action) => {
   switch(action.type) {
     case 'SET_STORIES':
       return action.stories

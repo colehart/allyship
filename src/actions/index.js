@@ -3,8 +3,8 @@ export const isLoading = (bool) => ({
   isLoading: bool,
 })
 
-export const receivedError = (errorMessage) => ({
-  type: 'RECEIVED_ERROR',
+export const caughtError = (errorMessage) => ({
+  type: 'CAUGHT_ERROR',
   errorMessage,
 })
 

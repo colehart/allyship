@@ -1,6 +1,6 @@
 import { fetchStories } from '../thunks/fetchStories'
 import * as Actions from '../actions'
-import { mockUrl, mockDispatch, mockApiStories, mockStories } from './testMocks'
+import { mockUrl, mockDispatch, mockError, mockApiStories, mockStories } from './testMocks'
 
 describe('fetchStories', () => {
   let thunk;
@@ -16,13 +16,12 @@ describe('fetchStories', () => {
     expect(mockDispatch).toHaveBeenCalledWith(expectedParams)
   })
 
-  it('should dispatch receivedError(message) if the response is not ok', async () => {
-    const message = 'not ok'
+  it('should dispatch caughtError(message) if the response is not ok', async () => {
     window.fetch = jest.fn(() => Promise.resolve({
       ok: false,
-      statusText: message
+      statusText: mockError
     }))
-    const expectedParams = Actions.receivedError(message)
+    const expectedParams = Actions.caughtError(mockError)
 
     await thunk(mockDispatch)
 

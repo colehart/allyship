@@ -12,14 +12,14 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   })
 
-  it('should have a type of RECEIVED_ERROR', () => {
+  it('should have a type of CAUGHT_ERROR', () => {
     const mockErrorMessage = 'Your API key has been disabled.'
     const expectedAction = {
-      type: 'RECEIVED_ERROR',
+      type: 'CAUGHT_ERROR',
       errorMessage: mockErrorMessage,
     }
 
-    const result = Actions.receivedError(mockErrorMessage)
+    const result = Actions.caughtError(mockErrorMessage)
     expect(result).toEqual(expectedAction)
   })
 

@@ -1,4 +1,4 @@
-import { isLoading, receivedError, setStories } from '../actions';
+import { isLoading, caughtError, setStories } from '../actions';
 
 export const fetchStories = (url) => {
   return async (dispatch) => {
@@ -14,7 +14,7 @@ export const fetchStories = (url) => {
       dispatch(setStories(cleanerStories))
     }
     catch (error) {
-      dispatch(receivedError(error.message))
+      dispatch(caughtError(error.message))
     }
   }
 }
