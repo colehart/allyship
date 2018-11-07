@@ -5,10 +5,10 @@ import { PropTypes } from 'prop-types';
 import shuttleIcon from '../../assets/images/space-shuttle.svg';
 import './Header.css';
 
-export const Header = (props) => {
+export const Header = ({ stories, caughtError }) => {
   const checkSaved = () => {
-    if (props.stories !== undefined) {
-      return props.stories.reduce((numSaved, story) => {
+    if (stories !== undefined) {
+      return stories.reduce((numSaved, story) => {
         if (story.isSaved) numSaved++
         return numSaved
       }, 0)
@@ -18,9 +18,9 @@ export const Header = (props) => {
   return (
     <div className='Header'>
       <div
-        className={ props.caughtError ? 'h-error' : 'hidden'}
+        className={ caughtError ? 'h-error' : 'hidden'}
       >
-        { props.caughtError }
+        { caughtError }
       </div>
       <Link
         to='/'

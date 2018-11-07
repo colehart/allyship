@@ -28,16 +28,19 @@ describe('Welcome', () => {
       expect(wrapper).toMatchSnapshot()
     })
 
-    it('should call handleClick when buttons are clicked', () => {
-
+    it('should call handleClick when trans button clicked', () => {
       wrapper.find('.w-transgender').simulate('click')
 
       expect(mockFetchStories).toHaveBeenCalled()
+    })
 
+    it('should call handleClick when immigration button clicked', () => {
       wrapper.find('.w-immigration').simulate('click')
 
       expect(mockFetchStories).toHaveBeenCalled()
+    })
 
+    it('should call handleClick when blm button clicked', () => {
       wrapper.find('.w-black-lives-matter').simulate('click')
 
       expect(mockFetchStories).toHaveBeenCalled()
