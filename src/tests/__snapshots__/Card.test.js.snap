@@ -45,3 +45,94 @@ exports[`Card Card Component matches the snapshot 1`] = `
   </a>
 </article>
 `;
+
+exports[`Card Card Component renders proper byline 1`] = `
+<article
+  className="Card"
+>
+  <div
+    className="c-title-group"
+  >
+    <h3
+      className="c-title"
+    >
+      What Being Transgender Looks Like, According to Stock Photography
+    </h3>
+    <div
+      className="c-save "
+    />
+  </div>
+  <p
+    className="c-byline"
+  >
+    2018-10-25
+     | 
+    The New York Times
+     
+  </p>
+  <img
+    alt="provided illustration"
+    className="c-image"
+    src="https://static01.nyt.com/images/2018/10/23/upshot/oakImage-1540334490988/oakImage-1540334490988-facebookJumbo.jpg"
+  />
+  <p
+    className="c-description"
+  >
+    The most used photo of a transgender person from Getty Images’s stock photo library shows the transgender pride symbol — but only part of the person’s face.
+  </p>
+  <a
+    className="c-link"
+    href="https://www.nytimes.com/2018/10/25/upshot/what-being-transgender-looks-like-according-to-stock-photography.html"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Read article from source
+  </a>
+</article>
+`;
+
+exports[`Card Card Component renders proper save icon 1`] = `
+<article
+  className="Card"
+>
+  <div
+    className="c-title-group"
+  >
+    <h3
+      className="c-title"
+    >
+      How to be an ally who stands with transgender people
+    </h3>
+    <div
+      className="c-save is-saved"
+    />
+  </div>
+  <p
+    className="c-byline"
+  >
+    2018-10-23
+     | 
+    Mashable
+     
+    | Victoria Rodriguez
+  </p>
+  <img
+    alt="provided illustration"
+    className="c-image"
+    src="https://i.amz.mshcdn.com/5pzXh7-L0211KSsQEfj9UV4v23o=/1200x630/2018%2F10%2F23%2Fd5%2Febde5e356f604ebeaa4548bdc4c4da6a.9e146.jpg"
+  />
+  <p
+    className="c-description"
+  >
+    There are many reasons you should learn how to be an ally to trans people. First, transgender rights are human rights — it's that simple. Trans people regularly encounter discrimination in everyday settings, such as workplaces, schools, and doctor's offices. …
+  </p>
+  <a
+    className="c-link"
+    href="https://mashable.com/article/transgender-rights-how-to-be-an-ally/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Read article from source
+  </a>
+</article>
+`;
