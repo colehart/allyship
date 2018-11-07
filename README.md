@@ -32,7 +32,7 @@ export default apiKey;
 * `npm start`
 
 ## See it live
-![A screen recording of the app](https://user-images.githubusercontent.com/36777482/48149713-073b1480-e27a-11e8-8c5e-c11d1f8e9417.png "App Screen Recording")
+![A screen recording of the app](https://github.com/colehart/allyship/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -57,10 +57,10 @@ Project spec can be found [here](http://frontend.turing.io/projects/binary-chall
 Allyship is a single page web app with different cards populating a card container depending on the selected category button.
 
 ### Welcome Page
-![Welcome Page](https://user-images.githubusercontent.com/36777482/48149795-423d4800-e27a-11e8-87a2-31736d648292.png "Welcome Page Wireframe")
+![Welcome Page](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop%E2%80%93%201.png "Welcome Page Wireframe")
 
 ### Sample News Page
-![Sample News Page](https://user-images.githubusercontent.com/36777482/48149819-51bc9100-e27a-11e8-9166-5087bec7aec7.png "Sample News Page Wireframe")
+![Sample News Page](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop-2.png "Sample News Page Wireframe")
 
 ### Saved News Page
-![Saved News Page](https://user-images.githubusercontent.com/36777482/48149841-6567f780-e27a-11e8-9bf7-e9927d8b8d3b.png "Saved News Wireframe")
+![Saved News Page](https://github.com/colehart/allyship/blob/master/src/assets/images/desktop%E2%80%93%203.png "Saved News Wireframe")
