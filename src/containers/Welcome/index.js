@@ -4,16 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Loader } from '../../components/Loader';
 import { fetchStories } from '../../thunks/fetchStories';
-import apiKey from '../../apiKey';
 import './Welcome.css';
 
 export const Welcome = (props) => {
   const { isLoading, fetchStories } = props
-
-  const handleClick = (query) => {
-    const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`
-    fetchStories(url)
-  }
 
   return (
     <main className='Welcome'>
@@ -36,27 +30,27 @@ export const Welcome = (props) => {
         <Link
           to='/transgender'
           exact='true'
-          className='btn'
+          className='w-transgender btn'
           aria-label='Click here for the latest transgender news'
-          onClick={() => handleClick('transgender')}
+          onClick={() => fetchStories('transgender')}
         >
           Transgender
         </Link>
         <Link
           to='/immigration'
           exact='true'
-          className='btn'
+          className='w-immigration btn'
           aria-label='Click here for the latest immigration news'
-          onClick={() => handleClick('immigration')}
+          onClick={() => fetchStories('immigration')}
         >
           Immigration
         </Link>
         <Link
           to='/black-lives-matter'
           exact='true'
-          className='btn'
+          className='w-black-lives-matter btn'
           aria-label='Click here for the latest black lives matter news'
-          onClick={() => handleClick('black%20lives%20matter')}
+          onClick={() => fetchStories('black%20lives%20matter')}
         >
           Black Lives Matter
         </Link>
@@ -70,7 +64,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  fetchStories: (url) => dispatch(fetchStories(url))
+  fetchStories: (query) => dispatch(fetchStories(query))
 })
 
 Welcome.propTypes = {

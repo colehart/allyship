@@ -11,7 +11,9 @@ describe('Welcome', () => {
 
     beforeEach(() => {
       mockFetchStories = jest.fn()
-      wrapper = shallow(<Welcome isLoading={false} fetchStories={mockFetchStories } />)
+      wrapper = shallow(
+        <Welcome isLoading={false} fetchStories={mockFetchStories} />
+      )
     })
 
     it('matches the snapshot', () => {
@@ -19,9 +21,26 @@ describe('Welcome', () => {
     })
 
     it('should render the Loader if isLoading(true)', () => {
-      wrapper = shallow(<Welcome isLoading={true} fetchStories={mockFetchStories} />)
+      wrapper = shallow(
+        <Welcome isLoading={true} fetchStories={mockFetchStories} />
+      )
 
       expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should call handleClick when buttons are clicked', () => {
+
+      wrapper.find('.w-transgender').simulate('click')
+
+      expect(mockFetchStories).toHaveBeenCalled()
+
+      wrapper.find('.w-immigration').simulate('click')
+
+      expect(mockFetchStories).toHaveBeenCalled()
+
+      wrapper.find('.w-black-lives-matter').simulate('click')
+
+      expect(mockFetchStories).toHaveBeenCalled()
     })
   })
 

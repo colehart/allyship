@@ -1,12 +1,12 @@
 import { fetchStories } from '../thunks/fetchStories'
 import * as Actions from '../actions'
-import { mockUrl, mockDispatch, mockError, mockApiStories, mockStories } from './testMocks'
+import { mockQuery, mockDispatch, mockError, mockApiStories, mockStories } from './testMocks'
 
 describe('fetchStories', () => {
   let thunk;
 
   beforeEach(() => {
-    thunk = fetchStories(mockUrl)
+    thunk = fetchStories(mockQuery)
   })
 
   it('should call dispatch with isLoading(true)', () => {

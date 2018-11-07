@@ -17,6 +17,10 @@ describe('Header', () => {
     })
 
     it('renders numSaved accurately', () => {
+      wrapper = shallow(<Header stories={undefined} />)
+
+      expect(wrapper).toMatchSnapshot()
+
       wrapper = shallow(<Header stories={mockSavedStories} />)
 
       expect(wrapper).toMatchSnapshot()

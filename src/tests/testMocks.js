@@ -1,4 +1,4 @@
-export const mockUrl = 'www.mockURL.com'
+export const mockQuery = 'transgender'
 export const mockDispatch = jest.fn()
 export const mockError = 'Bad API Key'
 export const mockApiStories = {
@@ -62,7 +62,7 @@ export const mockStories = [
 export const mockSavedStories = [
   {
     source: "The New York Times",
-    author: "CLAIRE CAIN MILLER",
+    author: "",
     title: "What Being Transgender Looks Like, According to Stock Photography",
     description: "The most used photo of a transgender person from Getty Images’s stock photo library shows the transgender pride symbol — but only part of the person’s face.",
     url: "https://www.nytimes.com/2018/10/25/upshot/what-being-transgender-looks-like-according-to-stock-photography.html",

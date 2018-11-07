@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import { CardContainer, mapStateToProps } from '../containers/CardContainer';
-import { mockDefaultState, mockFullState } from './testMocks'
+import { mockStories, mockDefaultState, mockFullState } from './testMocks'
 
 describe('CardContainer', () => {
   describe('CardContainer component', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = shallow(<CardContainer isLoading={false}/>)
+      wrapper = shallow(<CardContainer isLoading={false} stories={mockStories}/>)
     })
 
     it('matches the snapshot', () => {
@@ -17,7 +17,7 @@ describe('CardContainer', () => {
     })
 
     it('should render the Loader if isLoading(true)', () => {
-      wrapper = shallow(<CardContainer isLoading={true} />)
+      wrapper = shallow(<CardContainer isLoading={true} stories={mockStories}/>)
 
       expect(wrapper).toMatchSnapshot()
     })

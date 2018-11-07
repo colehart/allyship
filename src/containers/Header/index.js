@@ -7,7 +7,7 @@ import './Header.css';
 
 export const Header = (props) => {
   const checkSaved = () => {
-    if (props.stories) {
+    if (props.stories !== undefined) {
       return props.stories.reduce((numSaved, story) => {
         if (story.isSaved) numSaved++
         return numSaved
