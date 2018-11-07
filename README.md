@@ -32,7 +32,7 @@ export default apiKey;
 * `npm start`
 
 ## See it live
-![A screen recording of the app](./src/assets/images/screenRecording.mov "App Screen Recording")
+![A screen recording of the app](./src/assets/images/screenRecording.gif "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
