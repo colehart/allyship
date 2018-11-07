@@ -1,5 +1,6 @@
 .Welcome {
   width: 75%;
+  max-width: 780px;
   margin: 0 auto;
   grid-row: 2 / 3;
   display: flex;
