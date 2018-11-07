@@ -29,6 +29,8 @@ describe('Card', () => {
     })
 
     it.skip('calls toggleSaved when icon is clicked', () => {
+      wrapper = shallow(<Card { ...mockNoAuthStories[0] } />)
+
       const toggleSaved = jest.fn()
       wrapper.find('.c-save').simulate('click')
 

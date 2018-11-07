@@ -47,12 +47,12 @@ exports[`CardContainer CardContainer component matches the snapshot if location 
   <div
     className="cc-title-group"
   >
-    <a
+    <button
       className="cc-back-btn"
       onClick={[Function]}
     >
       ← Back
-    </a>
+    </button>
     <h2
       className="cc-title"
     >

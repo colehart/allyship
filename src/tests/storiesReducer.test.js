@@ -53,7 +53,7 @@ describe('storiesReducer', () => {
       expect(result).toEqual(expected);
     })
 
-    it('should return the state with saved movie', () => {
+    it('should return the state with saved stories and update localStorage', () => {
       const initialState = mockStories
       const expected = mockSavedStories;
 
