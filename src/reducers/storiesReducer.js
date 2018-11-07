@@ -1,3 +1,5 @@
+import { updateLocalStorage } from '../utils'
+
 export const isLoading = (state = false, action) => {
   switch(action.type) {
     case 'IS_LOADING':
@@ -23,7 +25,9 @@ export const setStories = (state = [], action) => {
     case 'TOGGLE_SAVED':
       return state.map(story => {
         if(story.title === action.headline) {
-          return { ...story, isSaved: !story.isSaved }
+          const toggledStory = { ...story, isSaved: !story.isSaved }
+          updateLocalStorage(toggledStory)
+          return toggledStory
         } else {
           return story
         }
