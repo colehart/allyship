@@ -20,6 +20,14 @@ export const setStories = (state = [], action) => {
   switch(action.type) {
     case 'SET_STORIES':
       return action.stories
+    case 'TOGGLE_SAVED':
+      return state.map(story => {
+        if(story.title === action.headline) {
+          return { ...story, isSaved: !story.isSaved }
+        } else {
+          return story
+        }
+      })
     default:
       return state
   }

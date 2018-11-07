@@ -1,6 +1,6 @@
-import { isLoading, caughtError, setStories } from '../reducers/storiesReducer';
+import { isLoading, caughtError, setStories, toggleSaved } from '../reducers/storiesReducer';
 import * as Actions from '../actions';
-import { mockStories, mockError } from './testMocks'
+import { mockStories, mockSavedStories, mockError, mockHeadline } from './testMocks'
 
 describe('storiesReducer', () => {
   describe('isLoading', () => {
@@ -50,6 +50,14 @@ describe('storiesReducer', () => {
       const expected = mockStories;
 
       const result = setStories(initialState, Actions.setStories(mockStories))
+      expect(result).toEqual(expected);
+    })
+
+    it('should return the state with saved movie', () => {
+      const initialState = mockStories
+      const expected = mockSavedStories;
+
+      const result = setStories(initialState, Actions.toggleSaved(mockHeadline))
       expect(result).toEqual(expected);
     })
   })

@@ -1,5 +1,5 @@
 import * as Actions from '../actions';
-import { mockStories, mockError } from './testMocks'
+import { mockStories, mockError, mockHeadline } from './testMocks'
 
 describe('actions', () => {
   it('should have a type of IS_LOADING', () => {
@@ -23,12 +23,21 @@ describe('actions', () => {
   })
 
   it('should have a type of SET_STORIES', () => {
-    const stories = mockStories;
     const expectedAction = {
       type: 'SET_STORIES',
       stories: mockStories
     }
     const result = Actions.setStories(mockStories)
+    expect(result).toEqual(expectedAction)
+  })
+
+  it('should have a type of TOGGLE_SAVED', () => {
+    const headline = mockHeadline;
+    const expectedAction = {
+      type: 'TOGGLE_SAVED',
+      headline: mockHeadline
+    }
+    const result = Actions.toggleSaved(headline)
     expect(result).toEqual(expectedAction)
   })
 })

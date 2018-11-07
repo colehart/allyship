@@ -14,6 +14,7 @@ exports[`Card Card Component matches the snapshot 1`] = `
     </h3>
     <div
       className="c-save "
+      onClick={[Function]}
     />
   </div>
   <p
@@ -60,6 +61,7 @@ exports[`Card Card Component renders proper byline 1`] = `
     </h3>
     <div
       className="c-save "
+      onClick={[Function]}
     />
   </div>
   <p
@@ -105,6 +107,7 @@ exports[`Card Card Component renders proper save icon 1`] = `
     </h3>
     <div
       className="c-save is-saved"
+      onClick={[Function]}
     />
   </div>
   <p

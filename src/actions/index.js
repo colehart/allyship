@@ -12,3 +12,8 @@ export const setStories = (stories) => ({
   type: 'SET_STORIES',
   stories,
 })
+
+export const toggleSaved = (headline) => ({
+  type: 'TOGGLE_SAVED',
+  headline,
+})

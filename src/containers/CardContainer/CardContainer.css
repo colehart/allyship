@@ -1,6 +1,27 @@
+.cc-title-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0 10px;
+}
+
+.cc-back-btn {
+  text-decoration: none;
+  color: var(--coral);
+  bottom: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cc-back-btn:hover {
+  text-decoration: none;
+  color: var(--turquoise);
+  bottom: 15px;
+}
+
 .cc-title {
   text-align: center;
-  margin: 40px 0 10px;
 }
 
 .CardContainer {
@@ -9,6 +30,6 @@
   margin: 0 auto;
   padding-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
