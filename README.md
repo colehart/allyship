@@ -15,14 +15,15 @@ Create a file in the `src/` directory called `apiKey.js`. This file is included 
 
 #### Export Key
 Make sure to export your key using the following syntax. The brackets denote dynamic data. You should replace them with the string of your API key.
-```
-_src/apiKey.js_
+<pre>
+<i>src/apiKey.js</i>
 
 const apiKey = ['yourApiKeyHere']
-_ex: const apiKey = 'aaaa999aa00'_
+<i>ex: const apiKey = 'aaaa999aa00'</i>
 
 export default apiKey;
-```
+</pre>
+
 ### Install and Start Server
 * Clone this repo.
 
