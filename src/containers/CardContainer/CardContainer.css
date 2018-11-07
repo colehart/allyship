@@ -11,7 +11,10 @@
   color: var(--coral);
   bottom: 15px;
   font-weight: 900;
+  font-size: 1.25rem;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .cc-back-btn:hover {
