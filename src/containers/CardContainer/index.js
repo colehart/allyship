@@ -9,7 +9,7 @@ import './CardContainer.css';
 export const CardContainer = (props) => {
   const { isLoading, location, history, stories } = props
   const savedStories = checkSaved(location, stories)
-  const cards = makeCards( savedStories, stories )
+  const cards = makeCards(savedStories, stories)
 
   const backButton = (
     <a
@@ -54,7 +54,6 @@ const cleanName = (pathname) => {
 export const mapStateToProps = (state) => ({
   isLoading: state.isLoading,
   stories: state.stories,
-  savedStories: state.stories.filter(story => story.isSaved)
 })
 
 CardContainer.propTypes = {

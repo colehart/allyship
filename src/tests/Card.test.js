@@ -27,6 +27,13 @@ describe('Card', () => {
 
       expect(wrapper).toMatchSnapshot();
     })
+
+    it.skip('calls toggleSaved when icon is clicked', () => {
+      const toggleSaved = jest.fn()
+      wrapper.find('.c-save').simulate('click')
+
+      expect(toggleSaved).toHaveBeenCalled()
+    })
   })
 
   describe('mapDispatchToProps', () => {
