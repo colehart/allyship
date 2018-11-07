@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import { Card, mapStateToProps } from '../containers/Card';
-import { mockDefaultState, mockFullState, mockStories, mockSavedStories } from './testMocks';
+import { Card, mapDispatchToProps } from '../containers/Card';
+import { mockDefaultState, mockNoAuthStories, mockFullState, mockStories, mockSavedStories, mockHeadline } from './testMocks';
 
 describe('Card', () => {
   describe('Card Component', () => {
@@ -23,20 +23,27 @@ describe('Card', () => {
     })
 
     it('renders proper byline', () => {
-      wrapper = shallow(<Card { ...mockSavedStories[0] } />)
+      wrapper = shallow(<Card { ...mockNoAuthStories[0] } />)
 
       expect(wrapper).toMatchSnapshot();
     })
+
+    it.skip('calls toggleSaved when icon is clicked', () => {
+      const toggleSaved = jest.fn()
+      wrapper.find('.c-save').simulate('click')
+
+      expect(toggleSaved).toHaveBeenCalled()
+    })
   })
 
-  // describe('mapDispatchToProps', () => {
-  //   it('should call dispatch with the toggleSaved action', () => {
-  //     const mockDispatch = jest.fn()
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch with the toggleSaved action', () => {
+      const mockDispatch = jest.fn()
 
-  //     const mappedProps = mapDispatchToProps(mockDispatch)
-  //     mappedProps.toggleSaved()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.toggleSaved(mockHeadline)
 
-  //     expect(mockDispatch).toHaveBeenCalled()
-  //   })
-  // })
+      expect(mockDispatch).toHaveBeenCalled()
+    })
+  })
 })

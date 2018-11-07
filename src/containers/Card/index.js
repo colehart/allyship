@@ -1,6 +1,7 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { toggleSaved } from '../../actions';
 import './Card.css';
 
 export const Card = (props) => {
@@ -12,7 +13,8 @@ export const Card = (props) => {
     url,
     urlToImage,
     published,
-    isSaved
+    isSaved,
+    toggleSaved
   } = props
 
   return (
@@ -21,6 +23,7 @@ export const Card = (props) => {
         <h3 className='c-title'>{title}</h3>
         <div
           className={`c-save ${ isSaved ? 'is-saved' : '' }`}
+          onClick={() => toggleSaved(title)}
         >
         </div>
       </div>
@@ -39,12 +42,12 @@ export const Card = (props) => {
   )
 }
 
-// export const mapDispatchToProps = (dispatch) => ({
-//   toggleSave: () => dispatch(toggleSave)
-// })
+export const mapDispatchToProps = (dispatch) => ({
+  toggleSaved: (headline) => dispatch(toggleSaved(headline))
+})
 
-// Card.propTypes = {
-//   toggleSaved: PropTypes.func
-// }
+Card.propTypes = {
+  toggleSaved: PropTypes.func
+}
 
-// export default connect(null, mapDispatchToProps)(Card)
+export default connect(null, mapDispatchToProps)(Card)

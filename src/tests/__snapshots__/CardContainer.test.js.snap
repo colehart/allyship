@@ -2,15 +2,19 @@
 
 exports[`CardContainer CardContainer component matches the snapshot 1`] = `
 <main>
-  <h2
-    className="cc-title"
+  <div
+    className="cc-title-group"
   >
-    Latest News
-  </h2>
+    <h2
+      className="cc-title"
+    >
+      Latest Immigration News
+    </h2>
+  </div>
   <div
     className="CardContainer"
   >
-    <Card
+    <Connect(Card)
       author="CLAIRE CAIN MILLER"
       content="Transgender people are appearing more often in advertisements and mass media. But when they do, its very often in stock photos that show them standing against a blank wall, or else they are hardly seen at all. The most used stock photos are close-ups of their… [+1039 chars]"
       description="The most used photo of a transgender person from Getty Images’s stock photo library shows the transgender pride symbol — but only part of the person’s face."
@@ -22,7 +26,7 @@ exports[`CardContainer CardContainer component matches the snapshot 1`] = `
       url="https://www.nytimes.com/2018/10/25/upshot/what-being-transgender-looks-like-according-to-stock-photography.html"
       urlToImage="https://static01.nyt.com/images/2018/10/23/upshot/oakImage-1540334490988/oakImage-1540334490988-facebookJumbo.jpg"
     />
-    <Card
+    <Connect(Card)
       author="Victoria Rodriguez"
       content="There are many reasons you should learn how to be an ally to trans people. First, transgender rights are human rights it's that simple. Trans people regularly encounter discrimination in everyday settings, such as workplaces, schools, and doctor's offices. Th… [+8478 chars]"
       description="There are many reasons you should learn how to be an ally to trans people. First, transgender rights are human rights — it's that simple. Trans people regularly encounter discrimination in everyday settings, such as workplaces, schools, and doctor's offices. …"
@@ -38,13 +42,43 @@ exports[`CardContainer CardContainer component matches the snapshot 1`] = `
 </main>
 `;
 
+exports[`CardContainer CardContainer component matches the snapshot if location is /saved 1`] = `
+<main>
+  <div
+    className="cc-title-group"
+  >
+    <a
+      className="cc-back-btn"
+      onClick={[Function]}
+    >
+      ← Back
+    </a>
+    <h2
+      className="cc-title"
+    >
+      Saved Stories
+    </h2>
+    <div
+      className="cc-placeholder"
+    />
+  </div>
+  <div
+    className="CardContainer"
+  />
+</main>
+`;
+
 exports[`CardContainer CardContainer component should render the Loader if isLoading(true) 1`] = `
 <main>
-  <h2
-    className="cc-title"
+  <div
+    className="cc-title-group"
   >
-    Latest News
-  </h2>
+    <h2
+      className="cc-title"
+    >
+      Latest Immigration News
+    </h2>
+  </div>
   <div
     className="CardContainer"
   >
