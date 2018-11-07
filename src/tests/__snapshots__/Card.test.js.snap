@@ -1,7 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card matches the snapshot 1`] = `
+exports[`Card Card Component matches the snapshot 1`] = `
 <article
   className="Card"
-/>
+>
+  <div
+    className="c-title-group"
+  >
+    <h3
+      className="c-title"
+    >
+      What Being Transgender Looks Like, According to Stock Photography
+    </h3>
+    <div
+      className="c-save "
+    />
+  </div>
+  <p
+    className="c-byline"
+  >
+    2018-10-25
+     | 
+    The New York Times
+     
+    | CLAIRE CAIN MILLER
+  </p>
+  <img
+    alt="provided illustration"
+    className="c-image"
+    src="https://static01.nyt.com/images/2018/10/23/upshot/oakImage-1540334490988/oakImage-1540334490988-facebookJumbo.jpg"
+  />
+  <p
+    className="c-description"
+  >
+    The most used photo of a transgender person from Getty Images’s stock photo library shows the transgender pride symbol — but only part of the person’s face.
+  </p>
+  <a
+    className="c-link"
+    href="https://www.nytimes.com/2018/10/25/upshot/what-being-transgender-looks-like-according-to-stock-photography.html"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Read article from source
+  </a>
+</article>
 `;

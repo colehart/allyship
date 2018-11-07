@@ -8,12 +8,15 @@ import './CardContainer.css';
 export const CardContainer = (props) => {
   const { isLoading } = props
   const cards = props.stories.map(story => {
-    return <Card {...story} key={story.description} />
+    return <Card {...story} key={story.url} />
   })
 
   return (
-    <main className='CardContainer'>
-      { isLoading ? <Loader /> : cards }
+    <main>
+      <h2 className='cc-title'>Latest News</h2>
+      <div className='CardContainer'>
+        { isLoading ? <Loader /> : cards }
+      </div>
     </main>
   )
 }
