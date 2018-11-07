@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
 import Card from '../Card';
@@ -12,11 +12,11 @@ export const CardContainer = (props) => {
   const cards = makeCards(savedStories, stories)
 
   const backButton = (
-    <a
+    <button
       className='cc-back-btn'
       onClick={() => history.goBack()}>
       &#8592; Back
-    </a>
+    </button>
   )
 
   return (
