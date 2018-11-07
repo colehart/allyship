@@ -15,14 +15,15 @@ Create a file in the `src/` directory called `apiKey.js`. This file is included 
 
 #### Export Key
 Make sure to export your key using the following syntax. The brackets denote dynamic data. You should replace them with the string of your API key.
-```
-_src/apiKey.js_
+<pre>
+<i>src/apiKey.js</i>
 
 const apiKey = ['yourApiKeyHere']
-_ex: const apiKey = 'aaaa999aa00'_
+<i>ex: const apiKey = 'aaaa999aa00'</i>
 
 export default apiKey;
-```
+</pre>
+
 ### Install and Start Server
 * Clone this repo.
 
@@ -31,7 +32,7 @@ export default apiKey;
 * `npm start`
 
 ## See it live
-[![A screen recording of the app](./src/assets/images/screenRecording.mov "App Screen Recording")]
+![A screen recording of the app](./src/assets/images/screenRecording.mov "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -56,10 +57,10 @@ Project spec can be found [here](http://frontend.turing.io/projects/binary-chall
 Allyship is a single page web app with different cards populating a card container depending on the selected category button.
 
 ### Welcome Page
-[![Welcome Page](./src/assets/images/desktop-1.png "Welcome Page Wireframe")]
+![Welcome Page](./src/assets/images/desktop-1.png "Welcome Page Wireframe")
 
 ### Sample News Page
-[![Sample News Page](./src/assets/images/desktop-2.jpg "Sample News Page Wireframe")]
+![Sample News Page](./src/assets/images/desktop-2.jpg "Sample News Page Wireframe")
 
 ### Saved News Page
-[![Saved News Page](./src/assets/images/desktop-3.jpg "Saved News Wireframe")]
+![Saved News Page](./src/assets/images/desktop-3.jpg "Saved News Wireframe")
