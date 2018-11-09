@@ -14,24 +14,24 @@ exports[`App matches the snapshot 1`] = `
       path="/"
     />
     <Route
+      component={[Function]}
       exact={true}
       path="/saved"
-      render={[Function]}
     />
     <Route
+      component={[Function]}
       exact={true}
       path="/transgender"
-      render={[Function]}
     />
     <Route
+      component={[Function]}
       exact={true}
       path="/immigration"
-      render={[Function]}
     />
     <Route
+      component={[Function]}
       exact={true}
       path="/black-lives-matter"
-      render={[Function]}
     />
     <Route
       component={[Function]}
