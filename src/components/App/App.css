@@ -3,7 +3,7 @@
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 160px 1fr;
 }
 
 .a-404 {

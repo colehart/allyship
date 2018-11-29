@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
+import { checkSaved, cleanName } from '../../utils'
 import Card from '../Card';
 import './CardContainer.css';
 
@@ -35,20 +36,10 @@ export const CardContainer = (props) => {
   )
 }
 
-const checkSaved = (location, stories) => {
-  if(location.pathname === '/saved') {
-    return stories.filter(story => story.isSaved)
-  }
-}
-
 const makeCards = (savedStories, stories) => {
   return (savedStories || stories).map(story => {
     return <Card {...story} key={story.url} />
   })
-}
-
-const cleanName = (pathname) => {
-  return pathname.charAt(1).toUpperCase() + pathname.slice(2);
 }
 
 export const mapStateToProps = (state) => ({
