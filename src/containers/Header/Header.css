@@ -22,6 +22,7 @@
   text-decoration: none;
   text-align: center;
   color: white;
+  border-radius: 3px;
 }
 
 .btn:hover,
@@ -76,7 +77,23 @@
 }
 
 @media screen and (max-width: 655px) {
-  .h-catgory-group {
-    width: 100%;
+  .Header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Header h1 {
+    font-size: 2.75rem;
+  }
+
+  .h-logo-group {
+    height: 50px;
+    width: 268px;
+    margin-bottom: 30px
+  }
+
+  .h-nav-group {
+    height: 50px;
   }
 }

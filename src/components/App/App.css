@@ -24,3 +24,9 @@
 .a-404 p {
   font-size: 1.15rem;
 }
+
+@media screen and (max-width: 655px) {
+  .App {
+    grid-template-rows: 225px 1fr;
+  }
+}
