@@ -28,8 +28,12 @@ describe('Card', () => {
       expect(wrapper).toMatchSnapshot();
     })
 
-    it.skip('calls toggleSaved when icon is clicked', () => {
+    it('calls toggleSaved when icon is clicked', () => {
       const toggleSaved = jest.fn()
+      const newProps = { ...mockStories[0], toggleSaved}
+
+      wrapper = shallow(<Card { ...newProps } />)
+
       wrapper.find('.c-save').simulate('click')
 
       expect(toggleSaved).toHaveBeenCalled()

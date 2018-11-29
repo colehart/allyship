@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import { PropTypes } from 'prop-types';
 import { Loader } from '../../components/Loader';
+import { checkSaved, cleanName } from '../../utils'
 import Card from '../Card';
 import './CardContainer.css';
 
@@ -19,36 +20,38 @@ export const CardContainer = (props) => {
     </button>
   )
 
+  const noSavedStories = (
+    <div className='cc-no-saved'>
+      <h3>
+        You have no saved stories.
+      </h3>
+      <p>
+        Click the sun icon in the upper right corner of any article to save a story.
+      </p>
+    </div>
+  )
+
   return (
     <main>
       <div className='cc-title-group'>
-        {savedStories ? backButton : ''}
+        { savedStories ? backButton : '' }
         <h2 className='cc-title'>
-          {savedStories ? 'Saved Stories' : `Latest ${cleanName(location.pathname)} News`}
+          { savedStories ? 'Saved Stories' : `Latest ${cleanName(location.pathname)} News` }
         </h2>
-        {savedStories ? <div className='cc-placeholder'></div> : ''}
+        { savedStories ? <div className='cc-placeholder'></div> : '' }
       </div>
       <div className='CardContainer'>
+        { savedStories && !savedStories.length ? noSavedStories : '' }
         { isLoading ? <Loader /> : cards }
       </div>
     </main>
   )
 }
 
-const checkSaved = (location, stories) => {
-  if(location.pathname === '/saved') {
-    return stories.filter(story => story.isSaved)
-  }
-}
-
 const makeCards = (savedStories, stories) => {
   return (savedStories || stories).map(story => {
     return <Card {...story} key={story.url} />
   })
-}
-
-const cleanName = (pathname) => {
-  return pathname.charAt(1).toUpperCase() + pathname.slice(2);
 }
 
 export const mapStateToProps = (state) => ({

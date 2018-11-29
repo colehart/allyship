@@ -16,41 +16,41 @@ exports[`Welcome Welcome Component matches the snapshot 1`] = `
       <br />
       Research the latest news about a specific minority identity or issue.
     </p>
+    <div
+      className="w-category-group"
+    >
+      <Link
+        aria-label="Click here for the latest transgender news"
+        className="w-transgender btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/transgender"
+      >
+        Transgender
+      </Link>
+      <Link
+        aria-label="Click here for the latest immigration news"
+        className="w-immigration btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/immigration"
+      >
+        Immigration
+      </Link>
+      <Link
+        aria-label="Click here for the latest black lives matter news"
+        className="w-black-lives-matter btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/black-lives-matter"
+      >
+        Black Lives Matter
+      </Link>
+    </div>
   </section>
-  <div
-    className="w-category-group"
-  >
-    <Link
-      aria-label="Click here for the latest transgender news"
-      className="w-transgender btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/transgender"
-    >
-      Transgender
-    </Link>
-    <Link
-      aria-label="Click here for the latest immigration news"
-      className="w-immigration btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/immigration"
-    >
-      Immigration
-    </Link>
-    <Link
-      aria-label="Click here for the latest black lives matter news"
-      className="w-black-lives-matter btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/black-lives-matter"
-    >
-      Black Lives Matter
-    </Link>
-  </div>
 </main>
 `;
 
@@ -71,40 +71,40 @@ exports[`Welcome Welcome Component should render the Loader if isLoading(true) 1
       <br />
       Research the latest news about a specific minority identity or issue.
     </p>
+    <div
+      className="w-category-group"
+    >
+      <Link
+        aria-label="Click here for the latest transgender news"
+        className="w-transgender btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/transgender"
+      >
+        Transgender
+      </Link>
+      <Link
+        aria-label="Click here for the latest immigration news"
+        className="w-immigration btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/immigration"
+      >
+        Immigration
+      </Link>
+      <Link
+        aria-label="Click here for the latest black lives matter news"
+        className="w-black-lives-matter btn"
+        exact="true"
+        onClick={[Function]}
+        replace={false}
+        to="/black-lives-matter"
+      >
+        Black Lives Matter
+      </Link>
+    </div>
   </section>
-  <div
-    className="w-category-group"
-  >
-    <Link
-      aria-label="Click here for the latest transgender news"
-      className="w-transgender btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/transgender"
-    >
-      Transgender
-    </Link>
-    <Link
-      aria-label="Click here for the latest immigration news"
-      className="w-immigration btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/immigration"
-    >
-      Immigration
-    </Link>
-    <Link
-      aria-label="Click here for the latest black lives matter news"
-      className="w-black-lives-matter btn"
-      exact="true"
-      onClick={[Function]}
-      replace={false}
-      to="/black-lives-matter"
-    >
-      Black Lives Matter
-    </Link>
-  </div>
 </main>
 `;

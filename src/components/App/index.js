@@ -24,19 +24,19 @@ export const App = () => {
         />
         <Route
           exact path='/saved'
-          component={ CardContainer }
+          render={() => <CardContainer /> }
         />
         <Route
           exact path='/transgender'
-          component={ CardContainer }
+          render={() => <CardContainer /> }
         />
         <Route
           exact path='/immigration'
-          component={ CardContainer }
+          render={() => <CardContainer /> }
         />
         <Route
           exact path='/black-lives-matter'
-          component={ CardContainer }
+          render={() => <CardContainer /> }
         />
         <Route
           component={ noMatch }

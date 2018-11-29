@@ -23,8 +23,14 @@
   bottom: 15px;
 }
 
-.cc-title {
+.cc-title,
+.cc-no-saved {
   text-align: center;
+}
+
+.cc-no-saved {
+  padding-left: 83.5px;
+  width: 80%;
 }
 
 .CardContainer {

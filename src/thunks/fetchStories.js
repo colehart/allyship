@@ -1,5 +1,6 @@
 import { isLoading, caughtError, setStories } from '../actions';
 import apiKey from '../apiKey';
+import { cleanStories } from '../utils'
 
 export const fetchStories = (query) => {
   return async (dispatch) => {
@@ -19,21 +20,4 @@ export const fetchStories = (query) => {
       dispatch(caughtError(error.message))
     }
   }
-}
-
-const cleanStories = (rawStories) => {
-  return rawStories.articles.map(article => {
-    const { author, title, description, url, urlToImage, content } = article
-    return {
-      source: article.source.name,
-      author,
-      title,
-      description,
-      url,
-      urlToImage,
-      content,
-      published: article.publishedAt.slice(0, 10),
-      isSaved: false,
-    }
-  })
 }
