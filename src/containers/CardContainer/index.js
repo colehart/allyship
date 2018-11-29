@@ -20,16 +20,28 @@ export const CardContainer = (props) => {
     </button>
   )
 
+  const noSavedStories = (
+    <div className='cc-no-saved'>
+      <h3>
+        You have no saved stories.
+      </h3>
+      <p>
+        Click the sun icon in the upper right corner of any article to save a story.
+      </p>
+    </div>
+  )
+
   return (
     <main>
       <div className='cc-title-group'>
-        {savedStories ? backButton : ''}
+        { savedStories ? backButton : '' }
         <h2 className='cc-title'>
-          {savedStories ? 'Saved Stories' : `Latest ${cleanName(location.pathname)} News`}
+          { savedStories ? 'Saved Stories' : `Latest ${cleanName(location.pathname)} News` }
         </h2>
-        {savedStories ? <div className='cc-placeholder'></div> : ''}
+        { savedStories ? <div className='cc-placeholder'></div> : '' }
       </div>
       <div className='CardContainer'>
+        { savedStories && !savedStories.length ? noSavedStories : '' }
         { isLoading ? <Loader /> : cards }
       </div>
     </main>
