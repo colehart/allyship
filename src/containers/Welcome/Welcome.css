@@ -26,3 +26,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 655px) {
+  .w-category-group {
+    height: 215px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .w-category-group .btn {
+    width: 100%;
+  }
+}

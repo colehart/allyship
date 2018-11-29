@@ -62,3 +62,14 @@
 .c-link:hover {
   color: var(--denim);
 }
+
+@media screen and (max-width: 460px) {
+  .Card {
+    height: 550px;
+    width: 250px;
+  }
+
+  .c-image {
+    max-height: 24%;
+  }
+}
