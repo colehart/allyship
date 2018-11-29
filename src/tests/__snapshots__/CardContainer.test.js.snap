@@ -64,7 +64,18 @@ exports[`CardContainer CardContainer component matches the snapshot if location 
   </div>
   <div
     className="CardContainer"
-  />
+  >
+    <div
+      className="cc-no-saved"
+    >
+      <h3>
+        You have no saved stories.
+      </h3>
+      <p>
+        Click the sun icon in the upper right corner of any article to save a story.
+      </p>
+    </div>
+  </div>
 </main>
 `;
 
