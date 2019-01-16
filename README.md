@@ -2,37 +2,37 @@
 
 # Allyship
 
-## A React app to help you find your way in the galaxy of knowledge and news any true ally must navigate.
+## A React app to help you find your way in the galaxy of knowledge and news any true ally must navigate. Stay up to date on headlines and events that affect minority identities without having to ask people what's going on.
+
+![A screen recording of the app](https://github.com/colehart/allyship/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
 
 ## How to Use
 
-### Retrieve and Save Unique API Key
-#### Retrieve Key
-This app utilizes the [NewsAPI](https://newsapi.org/). You will need a free API key to fetch news and populate cards. Click [here](https://newsapi.org/) to create an account and receive your key.
+### [Use it live on Heroku](https://allyship.herokuapp.com/)
+Visit [https://allyship.herokuapp.com/](https://allyship.herokuapp.com/).
 
-#### Save Key
-Create a file in the `src/` directory called `apiKey.js`. This file is included in the `.gitignore` and is shielded from any future commits you may make.
+### Use locally
+#### Retrieve and Save Unique API Key
+This app utilizes the [NewsAPI](https://newsapi.org/). You will need a free API key to fetch news and populate cards. [Click here](https://newsapi.org/) to create an account and receive your key.
 
-#### Export Key
-Make sure to export your key using the following syntax. The brackets denote dynamic data. You should replace them with the string of your API key.
+#### To Save Key
+Clone this repo to your local machine.
+
+Create a file in the root directory called `.env`. This file is included in the `.gitignore` and is shielded from any future commits you may make.
+
+Make sure to save your key using the following syntax. The brackets denote dynamic data. You should replace them with your API key.
 <pre>
-<i>src/apiKey.js</i>
+<i>.env</i>
 
-const apiKey = ['yourApiKeyHere']
-<i>ex: const apiKey = 'aaaa999aa00'</i>
+REACT_APP_API_KEY=[yourApiKeyHere]
 
-export default apiKey;
+<i>ex: REACT_APP_API_KEY=aaaa999aa00</i>
 </pre>
 
 ### Install and Start Server
-* Clone this repo.
-
 * `npm install`
 
 * `npm start`
-
-## See it live
-![A screen recording of the app](https://github.com/colehart/allyship/blob/master/src/assets/images/screenRecording.gif "App Screen Recording")
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -49,11 +49,9 @@ Tested with:
 ## Project Requirements
 Project spec can be found [here](http://frontend.turing.io/projects/binary-challenge.html).
 
-> Target audience assigned: Activists
->
-> Random API: [NewsAPI.org](https://newsapi.org/)
+I was assigned the target audience of 'Activists' and randomly assigned the [NewsAPI](https://newsapi.org/).
 
-## Wireframe
+## Wireframes I Made to Guide the Design
 Allyship is a single page web app with different cards populating a card container depending on the selected category button.
 
 ### Welcome Page
