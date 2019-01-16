@@ -6,7 +6,7 @@ export const fetchStories = (query) => {
   return async (dispatch) => {
     try {
       dispatch(isLoading(true))
-      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`
+      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey || process.env.REACT_APP_API_KEY}`
       const response = await fetch(url)
       if(!response.ok) {
         throw Error(response.statusText)
