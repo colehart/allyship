@@ -1,12 +1,11 @@
 import { isLoading, caughtError, setStories } from '../actions';
-import apiKey from '../apiKey';
 import { cleanStories } from '../utils'
 
 export const fetchStories = (query) => {
   return async (dispatch) => {
     try {
       dispatch(isLoading(true))
-      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey || process.env.REACT_APP_API_KEY}`
+      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`
       const response = await fetch(url)
       if(!response.ok) {
         throw Error(response.statusText)
